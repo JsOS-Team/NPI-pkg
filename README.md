@@ -35,4 +35,4 @@ $ git commit -m "Package <name>"
 $ git push
 ```
 
-Создайте PR на https://github.com/JsOS-Team>/NPI-pkg/pulls, указав ваш форк репозитория.
+Создайте PR на https://github.com/JsOS-Team/NPI-pkg/pulls, указав ваш форк репозитория.
