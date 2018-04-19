@@ -1,0 +1,66 @@
+{
+  "_from": "js-vim@*",
+  "_id": "js-vim@0.4.2",
+  "_inBundle": false,
+  "_integrity": "sha1-/7CC4DkZ7qPXeU1a48t73GuI4g0=",
+  "_location": "/js-vim",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "js-vim@*",
+    "name": "js-vim",
+    "escapedName": "js-vim",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/js-vim/-/js-vim-0.4.2.tgz",
+  "_shasum": "ffb082e03919eea3d7794d5ae3cb7bdc6b88e20d",
+  "_spec": "js-vim@*",
+  "_where": "/home/prophessor/tmp/mustdel/js-vim-node",
+  "author": {
+    "name": "Joe Sullivan",
+    "email": "itsjoesullivan@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/itsjoesullivan/js-vim/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "diff_match_patch": "0.1.1",
+    "get-set": "*",
+    "js-vim-command": "*",
+    "mauve": "*",
+    "underscore": "1.4.4"
+  },
+  "deprecated": false,
+  "description": "A JavaScript implementation of the vim text editor",
+  "devDependencies": {
+    "chai": "1.6.1",
+    "mocha": "1.12.0",
+    "should": "*"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "gitHead": "7250b5b4cbcc584454811012bcad5254162f7f0a",
+  "homepage": "https://github.com/itsjoesullivan/js-vim#readme",
+  "keywords": [
+    "vim"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "js-vim",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsjoesullivan/js-vim.git"
+  },
+  "scripts": {
+    "test": "mocha --recursive -r should -R min"
+  },
+  "version": "0.4.2"
+}

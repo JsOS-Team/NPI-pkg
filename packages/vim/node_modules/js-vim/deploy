@@ -1,0 +1,19 @@
+echo "Prepping js-vim-embed"
+cd ../js-vim-embed-page
+git checkout master
+echo "	Building js-vim-embed"
+./build
+git add vim*
+git commit -m "js-vim update"
+echo "	Committing new js-vim-embed"
+echo "Prepping js-vim-embed/gh-pages"
+git checkout gh-pages
+echo "	Checking out new build"
+git checkout master vim.js
+git checkout master vim.min.js
+git add vim*
+echo "	Committing changes"
+git commit -m "js-vim update"
+echo "Pushing to gh-pages"
+git push origin gh-pages
+echo "Deploy complete"

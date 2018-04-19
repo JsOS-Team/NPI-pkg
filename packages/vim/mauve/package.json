@@ -1,0 +1,57 @@
+{
+  "_from": "mauve@*",
+  "_id": "mauve@1.1.2",
+  "_inBundle": false,
+  "_integrity": "sha1-PFHLquEa9VmNhf/NclPwJyC5j8g=",
+  "_location": "/mauve",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "mauve@*",
+    "name": "mauve",
+    "escapedName": "mauve",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mauve/-/mauve-1.1.2.tgz",
+  "_shasum": "3c51cbaae11af5598d85ffcd7253f02720b98fc8",
+  "_spec": "mauve@*",
+  "_where": "/home/prophessor/Projects/JsOS/runtime",
+  "author": {
+    "name": "Joe Sullivan"
+  },
+  "bugs": {
+    "url": "https://github.com/itsjoesullivan/mauve/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "rgb": "~0.0.1",
+    "x256": "https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz"
+  },
+  "deprecated": false,
+  "description": "Does what colors does, except with hex values boiled down to xterm colors",
+  "homepage": "https://github.com/itsjoesullivan/mauve#readme",
+  "keywords": [
+    "mauve",
+    "hex",
+    "rgb",
+    "xterm",
+    "256"
+  ],
+  "license": "BSD",
+  "main": "index.js",
+  "name": "mauve",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsjoesullivan/mauve.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.2"
+}

@@ -1,0 +1,65 @@
+{
+  "_args": [
+    [
+      "x256@https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz",
+      "/home/prophessor/Projects/JsOS/runtime/js/apps/vim/js-vim"
+    ]
+  ],
+  "_from": "x256@https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz",
+  "_id": "x256@https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz",
+  "_inBundle": false,
+  "_integrity": "sha1-8VSrcuJqSqbesKPfnJAzuMG96KI=",
+  "_location": "/x256",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "x256@https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz",
+    "name": "x256",
+    "escapedName": "x256",
+    "rawSpec": "https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz",
+    "saveSpec": "https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz",
+    "fetchSpec": "https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz"
+  },
+  "_requiredBy": [
+    "/mauve"
+  ],
+  "_spec": "https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz",
+  "_where": "/home/prophessor/Projects/JsOS/runtime/js/apps/vim/js-vim",
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "bugs": {
+    "url": "https://github.com/substack/node-x256/issues"
+  },
+  "description": "find the nearest xterm 256 color index for an rgb",
+  "devDependencies": {
+    "tap": "~0.2.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "homepage": "https://github.com/substack/node-x256#readme",
+  "keywords": [
+    "256",
+    "terminal",
+    "colors",
+    "xterm",
+    "ansi"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "x256",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/node-x256.git"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "version": "https://github.com/itsjoesullivan/node-x256/archive/master.tar.gz"
+}
