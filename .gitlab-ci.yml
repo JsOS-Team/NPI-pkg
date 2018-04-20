@@ -19,7 +19,10 @@ test:
 pages:
   stage: deploy
   script:
-  - bundle exec jekyll build -d public
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
+    - bundle exec jekyll build -d public
   artifacts:
     paths:
     - public
