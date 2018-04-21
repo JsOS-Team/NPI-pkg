@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 # JsOS / No Problem Installer
 
