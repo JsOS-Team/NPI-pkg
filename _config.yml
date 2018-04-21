@@ -6,4 +6,4 @@ url: /
 github_username: JsOS-Team
 
 markdown: kramdown
-exclude: ["README.md"]
+theme: minima
