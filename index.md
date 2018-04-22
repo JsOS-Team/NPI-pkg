@@ -50,21 +50,36 @@ $ start npi f <pkg>
 You can get more info with `start npi help`.
 
 
+NPI can install packages from the main repository (aka NPI-pkg) and forked repositories from both GitHub and GitLab. By default, packages are searched for in main GitLab repository. You can override this behaviour by using the following commands:
+
+```bash
+$ start npi backend github  # Load from main GitHub repository
+$ start npi backend github:imachug  # Load from imachug's GitHub repository
+$ start npi backend gitlab:imachug  # Load from imachug's GitLab repository
+```
+
+By default, GitHub's and GitLab's *raw files* feature is used. It is unknown whether is has limits, but it works for installation of a given version. If you want to install the latest version and at the same time use *GitHub/GitLab Pages* backend, use:
+
+```bash
+$ start npi i <pkg>@pages
+```
+
+
 ## Creating a package
 
 ### 1. Fork
 
 First, fork our [GitHub](https://github.com/JsOS-Team/NPI-pkg/fork) or [GitLab](https://gitlab.com/JsOS/NPI-pkg/forks/new) repository.
 
-Then enable GitHub or GitLab pages.
+Then enable GitHub or GitLab pages, if you want to use `install <pkg>@pages`.
 
 #### GitHub
 
-Open your fork. Open settings and find *GitHub Pages* section. Choose *master branch* as source and press *Save*. Wait for page https://<your_username>.github.io/NPI-pkg/ to appear.
+Open your fork. Open settings and find *GitHub Pages* section. Choose *master branch* as source and press *Save*. Wait for page `https://<your_username>.github.io/NPI-pkg/` to appear.
 
 #### GitLab
 
-Open your fork. Open *CI / CD* tab on the left, then choose *Run Pipeline*. Choose *master* and *Create pipeline* and wait for the pipeline to finish. Open page https://<your_username>.gitlab.io/NPI-pkg/.
+Open your fork. Open *CI / CD* tab on the left, then choose *Run Pipeline*. Choose *master* and *Create pipeline* and wait for the pipeline to finish. Open page `https://<your_username>.gitlab.io/NPI-pkg/`.
 
 
 ### 2. Develop
@@ -82,7 +97,7 @@ If your package has its own repository on GitHub (or elsewhere), add it as a sub
 $ git submodule add https://github.com/<your_username>/<name> packages/<name>
 ```
 
-If there is not repository, just copy the directory:
+If there is no repository, just copy the directory:
 
 ```bash
 $ cp -r ../my_package packages/<name>
@@ -116,6 +131,12 @@ All packages will now be installed from your fork. For example, this will get `<
 
 ```bash
 $ start npi i <name>
+```
+
+Or download from *GitHub/GitLab pages*:
+
+```bash
+$ start npi i <name>@pages
 ```
 
 
