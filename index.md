@@ -33,17 +33,25 @@ or
 $ start npi i <pkg>
 ```
 
+If you want to install a specific version, use:
+
+```bash
+$ start npi install <pkg>@<commit>
+```
+
 
 Before installing, you may want to get some information about a package:
 
 ```bash
 $ start npi info <pkg>
+$ start npi info <pkg>@<commit>
 ```
 
 or
 
 ```bash
 $ start npi f <pkg>
+$ start npi f <pkg>@<commit>
 ```
 
 
