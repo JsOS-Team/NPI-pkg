@@ -9,7 +9,7 @@ layout: default
 NPI is a package manager for [JsOS](https://github.com/JsOS-Team/JsOS).
 
 
-## Installation
+# Installation
 
 Start JsOS (use `jsos start --netdev virtio` if using QEMU, otherwise your network connection may fail).
 
@@ -19,7 +19,7 @@ App npi installed successful!
 ```
 
 
-## Usage
+# Usage
 
 To install a package, use:
 
@@ -73,24 +73,24 @@ $ start npi i <pkg>@pages
 ```
 
 
-## Creating a package
+# Creating a package
 
-### 1. Fork
+## 1. Fork
 
 First, fork our [GitHub](https://github.com/JsOS-Team/NPI-pkg/fork) or [GitLab](https://gitlab.com/JsOS/NPI-pkg/forks/new) repository.
 
 Then enable GitHub or GitLab pages, if you want to use `install <pkg>@pages`.
 
-#### GitHub
+### GitHub
 
 Open your fork. Open settings and find *GitHub Pages* section. Choose *master branch* as source and press *Save*. Wait for page `https://<your_username>.github.io/NPI-pkg/` to appear.
 
-#### GitLab
+### GitLab
 
 Open your fork. Open *CI / CD* tab on the left, then choose *Run Pipeline*. Choose *master* and *Create pipeline* and wait for the pipeline to finish. Open page `https://<your_username>.gitlab.io/NPI-pkg/`.
 
 
-### 2. Develop
+## 2. Develop
 
 Then clone your fork:
 
@@ -121,7 +121,7 @@ $ git push
 You may change something and push again, and so on.
 
 
-### 3. Use
+## 3. Use
 
 Install NPI as specified in [Installation](#installation). Now choose backend:
 
@@ -148,6 +148,6 @@ $ start npi i <name>@pages
 ```
 
 
-### 4. Publish
+## 4. Publish
 
 Create a pull request at [GitHub](https://github.com/JsOS-Team/NPI-pkg/compare) and set your fork as *head fork*. Describe your package, and we will approve it as soon as possible.
