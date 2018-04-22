@@ -37,6 +37,7 @@ If you want to install a specific version, use:
 
 ```bash
 $ start npi install <pkg>@<commit>
+$ start npi install <pkg>@<version>
 ```
 
 
@@ -151,3 +152,5 @@ $ start npi i <name>@pages
 ## 4. Publish
 
 Create a pull request at [GitHub](https://github.com/JsOS-Team/NPI-pkg/compare) and set your fork as *head fork*. Describe your package, and we will approve it as soon as possible.
+
+When you are ready to publish a new verison, send a new pull request and tell us to give it version `v0.1` or something like that (see [semver](https://semver.org/)). We will create a corresponding tag and you'll be able to use `start npi i <name>@<version>`. You can check the tag locally by creating a tag `<name>--<version>` locally.
