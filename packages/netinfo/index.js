@@ -6,38 +6,52 @@
 function main (cmd, args, api, res) {
   const io = api.stdio;
 
-  io.setColor('red');
-  io.writeLine('NetInfo testing tool.');
-  io.writeLine('Created by ivan770');
-  io.setColor('green');
-  io.writeLine(`interfaces - Get all network interfaces`);
-
-  return res(0);
-}
-
-const interfaces = {
-  description: 'Get available network interfaces',
-  usage: 'interfaces',
-  run (suffix, api, res) {
-
+  if (args === 'interfaces'){
     const interfaces = require('../../core/net/interfaces');
-    const io = api.stdio;
 
     try {
       var arr = interfaces.getAll();
+      arr.forEach(function (item, i, arr) {
+        io.writeLine(i + ': ' + item.name);
+      });
     } catch (err) {
+      io.setColor('red');
+      io.writeLine('Unable to get network interfaces');
+
       return res(1);
     }
 
-    arr.forEach(function(item, i, arr) {
-      io.writeLine(i + ": " + item.name);
-    });
+  } else if (args === '') {
+    io.setColor('red');
+    io.writeLine('NetInfo testing tool.');
+    io.writeLine('Created by ivan770');
+    io.writeLine('');
+    io.setColor('green');
+    io.writeLine('interfaces - Get all network interfaces');
+    io.writeLine('stats - Get network usage stats');
+  } else if (args === 'stats') {
+    const netstat = require('../../core/net/net-stat');
 
-    return res(0);
-  },
-};
+    try {
+      var receiveCount = netstat.receiveCount;
+      var transmitCount = netstat.transmitCount;
+      io.writeLine(`'Receive: ${receiveCount}'`);
+      io.writeLine(`'Transmit: ${transmitCount}'`);
+    } catch (err) {
+      io.setColor('red');
+      io.writeLine('Unable to get network stats');
 
-$$.shell.setCommand('interfaces', interfaces);
+      return res(1);
+    }
+  } else {
+    io.setColor('red')
+    io.writeLine(`'Invalid argument : ${args}'`);
+
+    return res(1);
+  }
+
+  return res(0);
+}
 
 exports.call = main;
 
