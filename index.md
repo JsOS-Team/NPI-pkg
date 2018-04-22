@@ -50,12 +50,29 @@ $ start npi f <pkg>
 You can get more info with `start npi help`.
 
 
-## Adding your package
+## Creating a package
 
-[Fork our GitHub repository](https://github.com/JsOS-Team/NPI-pkg/fork). Then clone your fork:
+### 1. Fork
+
+First, fork our [GitHub](https://github.com/JsOS-Team/NPI-pkg/fork) or [GitLab](https://gitlab.com/JsOS/NPI-pkg/forks/new) repository.
+
+Then enable GitHub or GitLab pages.
+
+#### GitHub
+
+Open your fork. Open settings and find *GitHub Pages* section. Choose *master branch* as source and press *Save*. Wait for page https://<your_username>.github.io/NPI-pkg/ to appear.
+
+#### GitLab
+
+Open your fork. Open *CI / CD* tab on the left, then choose *Run Pipeline*. Choose *master* and *Create pipeline* and wait for the pipeline to finish. Open page https://<your_username>.gitlab.io/NPI-pkg/.
+
+
+### 2. Develop
+
+Then clone your fork:
 
 ```bash
-$ git clone https://github.com/<your_username>/NPI-pkg
+$ git clone https://<github/gitlab>.com/<your_username>/NPI-pkg
 $ cd NPI-pkg
 ```
 
@@ -78,4 +95,30 @@ $ git commit -a -m "Package <name>"
 $ git push
 ```
 
-[Create a pull request](https://github.com/JsOS-Team/NPI-pkg/compare) and set your fork as *head fork*. Describe your package, and we will approve it as soon as possible.
+You may change something and push again, and so on.
+
+
+### 3. Use
+
+Install NPI as specified in [Installation](#installation). Now choose backend:
+
+```bash
+$ start npi backend github:<your_usename>
+```
+
+or:
+
+```bash
+$ start npi backend gitlab:<your_usename>
+```
+
+All packages will now be installed from your fork. For example, this will get `<name>` from your fork:
+
+```bash
+$ start npi i <name>
+```
+
+
+### 4. Publish
+
+Create a pull request at [GitHub](https://github.com/JsOS-Team/NPI-pkg/compare) and set your fork as *head fork*. Describe your package, and we will approve it as soon as possible.
