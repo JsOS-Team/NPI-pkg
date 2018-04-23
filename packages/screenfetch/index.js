@@ -55,7 +55,7 @@ const root = [
 
 const suffix = [
   () => `User@${os.hostname()}`,
-  () => `JsOS version ${require('../../../package.json').version}`,
+  () => `JsOS version ${require('/package.json').version}`,
   () => `JsOS kernel version ${os.release()} ${os.arch()} (${os.endianness()})`,
   () => os.uptime(),
   () => PERSISTENCE.Apps._commands.length,
