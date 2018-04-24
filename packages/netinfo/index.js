@@ -1,6 +1,8 @@
 // NetInfo application
 // By ivan770
 
+// Gonna add MAC later
+
 'use strict';
 
 function main (cmd, args, api, res) {
@@ -29,6 +31,7 @@ function main (cmd, args, api, res) {
     io.setColor('green');
     io.writeLine('interfaces - Get all network interfaces');
     io.writeLine('stats - Get network usage stats');
+    io.writeLine('ip - Get IPv4 addresses');
   } else if (args === 'stats') {
     const netstat = require('../../core/net/net-stat');
 
@@ -43,6 +46,22 @@ function main (cmd, args, api, res) {
 
       return res(1);
     }
+  } else if (args === 'ip'){
+    const ip = require('../../core/net/ip4-address');
+
+    var IPLoopback = ip.LOOPBACK;
+    var IPAny = ip.ANY;
+    var IPBroadcast = ip.BROADCAST;
+    io.writeLine(`'IPV4 Loopback: ${IPLoopback}'`);
+    io.writeLine(`'IPV4 Any: ${IPAny}'`);
+    io.writeLine(`'IPV4 Broadcast: ${IPBroadcast}'`);
+
+  /* } else if (args === 'mac') {
+    const mac = require('../../core/net/mac-address');
+
+    var MACBroadcast = mac.BROADCAST;
+    io.writeLine(`'MAC Broadcast: ${MACBroadcast}'`); */
+
   } else {
     io.setColor('red')
     io.writeLine(`'Invalid argument : ${args}'`);
