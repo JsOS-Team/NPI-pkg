@@ -1,0 +1,12 @@
+{
+  "name": "hexviewer",
+  "version": "0.1.0",
+  "author": "PROPHESSOR",
+  "help": {
+    "description": "Show the hexadecimal representation of the file.",
+    "usage": "start hexviewer /path/to/file"
+  },
+  "libs": [
+    "jsmb-pseudo"
+  ]
+}
