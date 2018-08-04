@@ -1,0 +1,12 @@
+{
+  "name": "autopaint",
+  "version": "1.0.0",
+  "author": "PROPHESSOR",
+  "help": {
+    "description": "Port of the PROPHESSOR's autopaint program to JsOS. It's a random drawing screen saver.",
+    "usage": "start autopaint"
+  },
+  "libs": [
+    "jsmb-pseudo"
+  ]
+}
